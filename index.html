@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>豐邑</title>
+    <!-- <link rel="stylesheet" href="src/assets/style/app.min.css"> -->
+    <link rel="stylesheet" href="src/assets/css/app.css" />
+</head>
+
+<body>
+    <div class="s1">
+        <video class="video" src="https://ws.srl.tw/cs/202212091252096/video/glowing-bg.mp4" autoplay muted playsinline loop></video>
+
+        <!-- 左上背景葉子 -->
+        <div class="left-bg-box" data-relative-input="true" id="left-grass">
+            <img class="left-img" src="src/assets/images/left_grass.png" alt="" srcset="" />
+        </div>
+
+        <!-- 中間畫面 -->
+        <div class="middle-bg-box">
+            <!-- 底層框線 -->
+            <img id="back-line-bg-svg" src="src/assets/images/back_line.svg" alt="" srcset="" />
+            <!-- 前層框線 -->
+            <img id="front-line-bg-svg" src="src/assets/images/line_front.svg" alt="">
+            <!-- 中間花 -->
+            <div class="middle-img-mask" data-relative-input="true" id="scene">
+                <img class="middle-img" src="src/assets/images/flower_grass.png">
+            </div>
+            <!-- LOGO -->
+            <div class="middle-logo-box">
+                <div class="logo-green">
+                    <div class="upper-case-g">
+                        <img class="logo-g green" src="src/assets/images/g.png" alt="" srcset="" />
+                    </div>
+                    <div>
+                        <img class="logo-r green" src="src/assets/images/r.png" alt="" srcset="" />
+                    </div>
+                    <div>
+                        <img class="logo-e1 green" src="src/assets/images/e.png" alt="" srcset="" />
+                    </div>
+                    <div>
+                        <img class="logo-e2 green" src="src/assets/images/e.png" alt="" srcset="" />
+                    </div>
+                    <div>
+                        <img class="logo-n green" src="src/assets/images/n.png" alt="" srcset="" />
+                    </div>
+                </div>
+                <div class="logo-feng-yi-box">
+                    <div class="logo-feng-yi">
+                        <img src="src/assets/images/feng.png" alt="" srcset="" />
+                    </div>
+                    <div class="logo-feng-yi">
+                        <img src="src/assets/images/yi.png" alt="" srcset="" />
+                    </div>
+                    <div class="logo-i-leaf">
+                        <img class="single-leaf" src="src/assets/images/leaves.svg" alt="" srcset="" />
+                        <img class="single-i in" src="src/assets/images/i.png" alt="" srcset="" />
+                    </div>
+                    <div class="logo-upper-case-n">
+                        <img class="in" src="src/assets/images/upper_case_n.png" alt="" srcset="" />
+                    </div>
+                </div>
+                <div class="middle-slogan-box">
+                    <img src="src/assets/images/slogan.png" alt="" srcset="" />
+                </div>
+            </div>
+        </div>
+
+        <!-- 右下背景葉子 -->
+        <div class="right-bg-box" data-relative-input="true" id="right-grass">
+            <img class="right-img" src="src/assets/images/right_grass.png" alt="" srcset="" />
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>
