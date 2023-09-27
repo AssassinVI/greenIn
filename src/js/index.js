@@ -156,7 +156,7 @@ $(document).ready(function () {
         filter: "blur(0px)",
         duration: 0.7,
       },
-      ">-0.8"
+      ">-0.6"
     )
     .fromTo(
       ".green",
