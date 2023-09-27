@@ -159,6 +159,7 @@
   .s1 .middle-bg-box {
     width: 70%;
     left: -21.7391304348vw;
+    margin-bottom: 20%;
   }
 }
 .s1 .middle-bg-box .middle-img-mask {
@@ -588,4 +589,4 @@
   left: 110px;
   margin: auto;
   z-index: 99;
-}
+}/*# sourceMappingURL=app.css.map */

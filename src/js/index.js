@@ -1,4 +1,47 @@
-window.onload = function () {
+$(document).ready(function () {
+  
+  let bg_tl=gsap.timeline({
+      scrollTrigger: {
+          trigger: '.contact_us_div',
+          start: "top center",
+        end: `+=1px`,
+          scrub: 1,
+      }
+  });
+
+  bg_tl.to('#case_div', 1, {'backgroundColor' : '#ffffff'});
+  
+
+  //-- 表單樣板 --
+  form_template ("form.html?3");
+
+  //-- 表單送出 --
+  $('#call_form').on('click', '#sub_btn1', function (event) {
+  let err_arr=[
+      {DOM_id:'#ca_name', txt:'貴賓姓名，'},
+      {DOM_id:'#ca_phone', txt:'聯繫電話，'},
+      {DOM_id:'#ca_time', txt:'方便聯繫時間'},
+
+  ];
+  let ajax_data={
+                      name: $('#ca_name').val(),
+                      phone: $('#ca_phone').val(),
+                      mail: '',
+                      msg:  `方便聯繫時間：${$('#ca_time').val()}｜留言：${$('#ca_msg').val()}`,
+                      case_name: document.title,
+                      case_id: $('#case_id').val(),
+                      case_aes_id: $('#case_aes_id').val(),
+                      //'g-recaptcha-response': grecaptcha.getResponse(g_grecaptcha),
+                      test: $('#test').val(),
+                      send_list: $('#send_list').val()
+  };
+
+  form_submit(err_arr, ajax_data);
+  });
+  
+  
+  
+  
   let tl = gsap.timeline({
     delay: 0.3,
   });
@@ -105,7 +148,7 @@ window.onload = function () {
     .fromTo(
       "#back-line-bg-svg",
       {
-        filter: "blur(5px)",
+        filter: "blur(10px)",
         opacity: 0,
       },
       {
@@ -113,7 +156,7 @@ window.onload = function () {
         filter: "blur(0px)",
         duration: 0.7,
       },
-      ">-0.1"
+      ">-0.8"
     )
     .fromTo(
       ".green",
@@ -187,4 +230,4 @@ window.onload = function () {
       },
       ">"
     );
-};
+});
